@@ -38,7 +38,7 @@ public class Main {
 		float checkValue = Float.compare(lineOne, lineTwo); //used Wrapper class
 		if (checkValue == ZERO)
 			System.out.println("Both line are equal");
-		else if(checkValue > ONE)
+		else if(checkValue > ZERO)
 			System.out.println("the line are grater");
 		else
 			System.out.println("The line two are grater");
