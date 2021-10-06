@@ -31,11 +31,14 @@ public class Main {
 		l1.p4 = p4;
 		
 		float lineOne = l1.lineLength(p1.x, p1.y, p2.x, p2.y);
+		String lineFirst = Float.toString(lineOne); 
 		float lineTwo = l1.lineLength(p3.x, p3.y, p4.x, p4.y);
+		String lineSecond = Float.toString(lineOne);
+		int finalValue = lineFirst.compareTo(lineSecond);
 		float checkValue = Float.compare(lineOne, lineTwo); //used Wrapper class
 		if (checkValue == ZERO)
 			System.out.println("Both line are equal");
-		else if(checkValue == ONE)
+		else if(checkValue > ONE)
 			System.out.println("the line are grater");
 		else
 			System.out.println("The line two are grater");
