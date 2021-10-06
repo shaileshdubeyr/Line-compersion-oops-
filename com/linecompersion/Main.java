@@ -1,7 +1,10 @@
 package com.linecompersion;
 
 public class Main {
-		static final int ZERO = 0; 
+		static final int ZERO = 0, ONE = 1;
+		static void checkLine() {
+			
+		}
 	public static void main(String[] args) {
 		
 		System.out.println("Eneter the first line points value");
@@ -26,13 +29,16 @@ public class Main {
 		Line l2 = new Line();
 		l2.p3 = p3;
 		l1.p4 = p4;
+		
 		float lineOne = l1.lineLength(p1.x, p1.y, p2.x, p2.y);
 		float lineTwo = l1.lineLength(p3.x, p3.y, p4.x, p4.y);
-		float checkValue = Float.compare(lineOne, lineTwo);
+		float checkValue = Float.compare(lineOne, lineTwo); //used Wrapper class
 		if (checkValue == ZERO)
 			System.out.println("Both line are equal");
+		else if(checkValue == ONE)
+			System.out.println("the line are grater");
 		else
-			System.out.println("Bot line are identical");
+			System.out.println("The line two are grater");
 	}
 
 }
